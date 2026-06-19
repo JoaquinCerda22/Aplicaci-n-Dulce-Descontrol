@@ -1,0 +1,6 @@
+{
+  "name": "Dulce Descontrol",
+  "description": "Sistema de gestión y pedidos de repostería artesanal para Dulce Descontrol",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
