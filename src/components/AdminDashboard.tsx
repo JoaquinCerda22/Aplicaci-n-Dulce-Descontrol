@@ -521,7 +521,7 @@ export default function AdminDashboard({ onLogout }: AdminDashboardProps) {
                             <h3 className="font-serif text-lg font-bold text-primary">{ord.clientName}</h3>
                             <div className="flex flex-wrap items-center gap-4 text-xs text-on-surface-variant mt-1">
                               <span className="flex items-center gap-1"><span className="material-symbols-outlined text-xs">phone</span> {ord.clientPhone}</span>
-                              <span className="flex items-center gap-1 font-bold text-primary"><span className="material-symbols-outlined text-xs">local_shipping</span> {ord.deliveryDate} ({ord.deliveryTime})</span>
+                              <span className="flex items-center gap-1 font-bold text-primary"><span className="material-symbols-outlined text-xs">storefront</span> {ord.deliveryDate} ({ord.deliveryTime})</span>
                               {hasCustom && <span className="bg-primary-fixed text-primary px-2 py-0.5 rounded text-[10px] font-bold">Pedido Personalizado</span>}
                             </div>
                           </div>

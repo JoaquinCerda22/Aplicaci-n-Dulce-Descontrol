@@ -15,7 +15,7 @@ export default function Storefront({ products, onNavigateToCustomSpecs, onNaviga
   const [clientPhone, setClientPhone] = useState('');
   const [clientEmail, setClientEmail] = useState('');
   const [deliveryDate, setDeliveryDate] = useState('');
-  const [paymentMethod, setPaymentMethod] = useState<'efectivo' | 'transferencia' | 'tarjeta'>('transferencia');
+  const [paymentMethod, setPaymentMethod] = useState<'efectivo' | 'transferencia'>('transferencia');
   const [submittingOrder, setSubmittingOrder] = useState(false);
   const [successInfo, setSuccessInfo] = useState<{ id: string } | null>(null);
 
@@ -230,6 +230,11 @@ export default function Storefront({ products, onNavigateToCustomSpecs, onNaviga
                   </div>
                 </div>
 
+                <div className="bg-[#fff1ed] p-3 rounded-lg border border-primary/20 text-center flex items-center gap-2 justify-center text-primary text-xs font-bold font-mono shadow-sm">
+                  <span className="material-symbols-outlined text-base">storefront</span>
+                  Atención: Todos los pedidos son solo para retiro en tienda.
+                </div>
+
                 {/* Contact form inputs */}
                 <div className="bg-[#fff8f6] p-4 rounded-xl border border-outline-variant/30 flex flex-col gap-4">
                   <h3 className="text-xs font-semibold text-primary uppercase tracking-wider">Datos de Contacto</h3>
@@ -276,11 +281,10 @@ export default function Storefront({ products, onNavigateToCustomSpecs, onNaviga
 
                   <div className="flex flex-col gap-1.5 mt-1 border-t pt-3">
                     <label className="text-xs font-semibold text-on-surface-variant">Método de Pago</label>
-                    <div className="grid grid-cols-3 gap-2">
+                    <div className="grid grid-cols-2 gap-2">
                       {[
                         { label: 'Efectivo', value: 'efectivo' },
-                        { label: 'Transfer.', value: 'transferencia' },
-                        { label: 'Tarjeta', value: 'tarjeta' }
+                        { label: 'Transfer.', value: 'transferencia' }
                       ].map(payment => (
                         <button 
                           key={payment.value}

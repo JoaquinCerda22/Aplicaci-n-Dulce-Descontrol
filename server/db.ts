@@ -56,10 +56,10 @@ function getInitialOrders() {
   const pastDateStr = pastDate.toISOString().split('T')[0];
 
   return [
-    { id: '#089', client_name: 'María González', client_phone: '+56 9 8765 4321', client_email: 'maria@gmail.com', client_address: 'Av. Vitacura 1234, Providencia', delivery_date: todayStr, delivery_time: '14:00', payment_method: 'transferencia', status: 'En producción', notes: 'Entregar con cuidado.', total_price: 1450000, type: 'custom', created_at: todayStr },
-    { id: '#092', client_name: 'Cafetería El Grano', client_phone: '+56 2 2234 5678', client_email: 'contacto@elgrano.cl', client_address: 'Providencia 456', delivery_date: tomorrowStr, delivery_time: '07:00', payment_method: 'tarjeta', status: 'Confirmado', notes: 'Retiro temprano.', total_price: 850000, type: 'standard', created_at: todayStr },
-    { id: '#085', client_name: 'Carlos Ruiz', client_phone: '+56 9 1111 2222', client_email: 'carlos@ruiz.cl', client_address: 'Las Condes 7890', delivery_date: todayStr, delivery_time: '10:00', payment_method: 'efectivo', status: 'Entregado', notes: '', total_price: 320000, type: 'standard', created_at: pastDateStr },
-    { id: '#095', client_name: 'Valentina Tapia', client_phone: '+56 9 9999 8888', client_email: 'valita@tapia.cl', client_address: 'Santiago Centro 55', delivery_date: tomorrowStr, delivery_time: '18:00', payment_method: 'transferencia', status: 'Cotizado', notes: 'Escribir "Feliz Cumple Vale"', total_price: 2100000, type: 'custom', created_at: todayStr }
+    { id: '#089', client_name: 'María González', client_phone: '+56 9 8765 4321', client_email: 'maria@gmail.com', client_address: 'Retiro en Taller', delivery_date: todayStr, delivery_time: '14:00', payment_method: 'transferencia', status: 'En producción', notes: '', total_price: 1450000, type: 'custom', created_at: todayStr },
+    { id: '#092', client_name: 'Cafetería El Grano', client_phone: '+56 2 2234 5678', client_email: 'contacto@elgrano.cl', client_address: 'Retiro en Taller', delivery_date: tomorrowStr, delivery_time: '07:00', payment_method: 'transferencia', status: 'Confirmado', notes: 'Retiro temprano.', total_price: 850000, type: 'standard', created_at: todayStr },
+    { id: '#085', client_name: 'Carlos Ruiz', client_phone: '+56 9 1111 2222', client_email: 'carlos@ruiz.cl', client_address: 'Retiro en Taller', delivery_date: todayStr, delivery_time: '10:00', payment_method: 'efectivo', status: 'Entregado', notes: '', total_price: 320000, type: 'standard', created_at: pastDateStr },
+    { id: '#095', client_name: 'Valentina Tapia', client_phone: '+56 9 9999 8888', client_email: 'valita@tapia.cl', client_address: 'Retiro en Taller', delivery_date: tomorrowStr, delivery_time: '18:00', payment_method: 'transferencia', status: 'Cotizado', notes: 'Escribir "Feliz Cumple Vale"', total_price: 2100000, type: 'custom', created_at: todayStr }
   ];
 }
 
@@ -244,7 +244,7 @@ export async function createOrder(payload: any) {
     client_name: payload.clientName,
     client_phone: payload.clientPhone,
     client_email: payload.clientEmail || '',
-    client_address: payload.clientAddress || '',
+    client_address: payload.clientAddress || 'Retiro en Taller',
     delivery_date: payload.deliveryDate,
     delivery_time: payload.deliveryTime || '12:00',
     payment_method: payload.paymentMethod,

@@ -135,11 +135,11 @@ export default function TrackOrder() {
                   <div className={`absolute -left-[25px] top-1 rounded-full w-6 h-6 flex items-center justify-center border-4 border-white ${
                     statusIndex === 5 ? 'bg-tertiary-fixed text-on-tertiary-fixed' : 'bg-outline-variant'
                   }`}>
-                    <span className="material-symbols-outlined text-[14px]">local_shipping</span>
+                    <span className="material-symbols-outlined text-[14px]">storefront</span>
                   </div>
                   <div className="pl-4">
-                    <h4 className="font-sans text-sm font-bold text-on-surface">Listo para Entrega / Retiro</h4>
-                    <p className="font-sans text-xs text-on-surface-variant mt-1">El dulce encargo está en perfectas condiciones y listo para deleitarte.</p>
+                    <h4 className="font-sans text-sm font-bold text-on-surface">Listo para Retiro en Tienda</h4>
+                    <p className="font-sans text-xs text-on-surface-variant mt-1">Tu pedido está en perfectas condiciones y listo para que lo retires en nuestro taller.</p>
                   </div>
                 </div>
 

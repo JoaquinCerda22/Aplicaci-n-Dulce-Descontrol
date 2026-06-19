@@ -53,7 +53,7 @@ export default function CustomOrder({ onNavigateToTracking, onNavigateHome }: Cu
       clientName,
       clientPhone,
       clientEmail,
-      clientAddress: 'Retiro en Taller / Acordar despacho',
+      clientAddress: 'Retiro en Taller',
       deliveryDate,
       deliveryTime: '12:00',
       paymentMethod: 'transferencia',
@@ -446,6 +446,10 @@ export default function CustomOrder({ onNavigateToTracking, onNavigateHome }: Cu
 
             {/* Step 4: Contact Info */}
             <section className="bg-surface-container-low p-6 md:p-8 rounded-xl flex flex-col gap-6 shadow-sm border border-outline-variant/30">
+              <div className="bg-[#fff1ed] p-3 rounded-lg border border-primary/20 text-center flex items-center gap-2 justify-center text-primary text-xs font-bold font-mono shadow-sm col-span-full">
+                <span className="material-symbols-outlined text-base">storefront</span>
+                Atención: Todos los pedidos son solo para retiro en tienda.
+              </div>
               <div className="flex items-center gap-4 border-b border-outline-variant/40 pb-4">
                 <div className="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg font-serif">4</div>
                 <h2 className="font-serif text-2xl text-primary font-bold">Fecha y Datos de Contacto</h2>
@@ -575,7 +579,7 @@ export default function CustomOrder({ onNavigateToTracking, onNavigateHome }: Cu
 
             <div className="mt-4 pt-6 border-t border-outline-variant/40">
               <p className="text-xs text-on-surface-variant mb-6 text-center italic leading-relaxed">
-                * Este formulario envía una solicitud de diseño técnico. Te contactaremos dentro de 48 horas hábiles para acordar los ajustes finales y despachos.
+                * Este formulario envía una solicitud de diseño técnico. Te contactaremos dentro de 48 horas hábiles para acordar los ajustes finales para el retiro.
               </p>
               {errorMessage && <p className="text-xs text-error text-center mb-4 font-bold">{errorMessage}</p>}
               <button 
