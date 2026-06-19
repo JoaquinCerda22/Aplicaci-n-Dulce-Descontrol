@@ -12,6 +12,11 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
+    
+    const subject = formData.subject || 'Mensaje desde la web - Contacto';
+    const body = `Nombre: ${formData.name}\nEmail: ${formData.email}\n\nMensaje:\n${formData.message}`;
+    window.location.href = `mailto:dulce.descontrol01@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
     setSubmitted(true);
   };
 
